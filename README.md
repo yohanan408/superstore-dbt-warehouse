@@ -27,7 +27,9 @@ orders CSV ──► ingestion/ingest_raw_data.py ──► raw.superstore_trans
 - **Ingestion** (`ingestion/ingest_raw_data.py`, SQLAlchemy): reads the Orders CSV, normalizes column names, converts currency and date columns (with an explicit date format), checks that nothing was lost in conversion, and reloads `raw.superstore_transactions`. Re-running it replaces the data instead of duplicating it. The connection string comes from the `DATABASE_URL` environment variable.
 - **Transformation** (dbt Core): `models/dim_products.sql` and `models/fact_orders.sql` restructure the raw table into a star schema. `fact_orders` carries calculated lead times and a loss flag.
 - **Data tests** (`models/schema.yml`): `not_null` and `unique` tests on the product keys in `dim_products` and on `fact_orders.row_id`, plus a `not_null` test on `fact_orders.quantity`.
-- **BI layer:** the star schema feeds a Power BI report on shipping lead times and loss rates. [https://github.com/yohanan408/superstore-dbt-warehouse/blob/main/Screenshot%202026-11-26%20175030.png]
+- **BI layer:** the star schema feeds a Power BI report on shipping lead times and loss rates.
+  <img width="756" height="422" alt="image" src="https://github.com/user-attachments/assets/9a218521-7012-4c4d-b5a0-8016f70f5052" />
+
 
 ## Findings
 
