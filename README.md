@@ -114,4 +114,4 @@ The project uses the US Superstore sales dataset (9,994 order lines). [https://w
 
 ## License
 
-MIT. See [[LICENSE](LICENSE)]
+MIT. See [LICENSE(LICENSE)]
