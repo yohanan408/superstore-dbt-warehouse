@@ -41,7 +41,13 @@ These figures were first verified in a pandas analysis.
 
 ## Quickstart
 
-1. Install PostgreSQL, create the `demand_aw_dw` database, and create the `raw.superstore_transactions` table.
+1. Install PostgreSQL, then create the database and the raw table (the SQL is in ingestion/create_raw_table.sql):
+
+```bash
+psql -U postgres -c "CREATE DATABASE demand_aware_dw;"
+psql -U postgres -d demand_aware_dw -f ingestion/create_raw_table.sql
+```
+
 2. Install the dependencies (`pandas`, `sqlalchemy`, `psycopg2-binary`, `dbt-postgres`).
 3. Export the "Orders" sheet of the dataset as `US Superstore data - Orders.csv` and place it next to the ingestion script.
 4. Load the raw table (Windows cmd; use `export` on macOS/Linux):
