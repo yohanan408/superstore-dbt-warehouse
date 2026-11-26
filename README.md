@@ -80,6 +80,7 @@ dbt test     # runs the schema.yml tests
 ```
 superstore-dbt-warehouse/
 ├── ingestion/
+│   ├── create_raw_table.sql
 │   └── ingest_raw_data.py
 ├── models/
 │   ├── dim_products.sql
