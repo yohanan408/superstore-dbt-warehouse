@@ -110,7 +110,7 @@ superstore-dbt-warehouse/
 
 ## Data
 
-The project uses the US Superstore sales dataset (9,994 order lines). [TODO: add the source and any license or attribution requirements.]
+The project uses the US Superstore sales dataset (9,994 order lines). [https://www.kaggle.com/datasets/juhi1994/superstore]
 
 ## License
 
