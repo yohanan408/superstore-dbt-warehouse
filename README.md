@@ -60,7 +60,7 @@ python ingestion/ingest_raw_data.py
 5. Create a dbt profile at `~/.dbt/profiles.yml`. The profile name must match `profile:` in `dbt_project.yml`; the values below are placeholders.
 
 ```yaml
-demand_aware_pipeline:
+superstore_dbt_warehouse:
   target: dev
   outputs:
     dev:
