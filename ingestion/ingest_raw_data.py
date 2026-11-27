@@ -27,7 +27,11 @@ DATE_COLS = ["order_date", "ship_date"]
 
 def load_and_clean(csv_path):
     """Read the CSV, normalize column names, and convert numbers and dates."""
-    df = pd.read_csv(csv_path, encoding="cp1252")
+    try:
+        df = pd.read_csv(csv_path, encoding="utf-8-sig")
+    except UnicodeDecodeError:
+        df = pd.read_csv(csv_path, encoding="latin1")
+
 
     # 'Row ID' -> 'row_id', 'Sub-Category' -> 'sub_category', etc.
     df.columns = [c.strip().lower().replace("-", "_").replace(" ", "_") for c in df.columns]
