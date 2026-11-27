@@ -1,11 +1,11 @@
 
 # Name your project! Project names should contain only lowercase characters
 # and underscores.
-name: 'demand_aware_pipeline'
+name: 'superstore_dbt_warehouse'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'demand_aware_pipeline'
+profile: 'superstore_dbt_warehouse'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -26,6 +26,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
 models:
-  demand_aware_pipeline:
+  superstore_dbt_warehouse:
     +materialized: table
 
